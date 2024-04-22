@@ -13,5 +13,5 @@ jobs:
           node-version: 20.11.0
           cache: 'npm'
       - run: npm ci
-      - run: TEST_BASE_URL="123123" TEST_BASE_OTHER="test" node src/env.js
+      - run: node src/env.js
 
