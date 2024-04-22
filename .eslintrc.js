@@ -3,7 +3,8 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['standard', 'prettier'],
+  plugins: ['wdio', 'mocha'],
+  extends: ['standard', 'prettier', 'plugin:wdio/recommended'],
   overrides: [
     {
       env: {
