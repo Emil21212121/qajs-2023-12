@@ -16,9 +16,9 @@ jobs:
           node-version: 20.11.0
           cache: 'npm'
       - run: npm ci
-      - run: echo ${{env.ENV_FILE}}
+      - run: echo ${{vars.ENV_FILE}}
       - run: |
-          echo "${{env.ENV_FILE}}" >> .env
+          echo "${{vars.ENV_FILE}}" >> .env
           cat .env
       - run: node src/env.mjs
 
