@@ -6,7 +6,7 @@ jobs:
   env:
     runs-on: ubuntu-latest
 
-    environment:
+    env:
       TEST_GITHUB_OTHER: ${{env.TEST_GITHUB_ENV}}
 
     steps:
