@@ -16,6 +16,9 @@ jobs:
           node-version: 20.11.0
           cache: 'npm'
       - run: npm ci
-      - run: echo ${{env.TEST_GITHUB_OTHER}}
-      - run: TEST_GITHUB_ENV="${{vars.TEST_GITHUB_ENV}}" node src/env.mjs
+      - run: echo ${{env.ENV_FILE}}
+      - run: |
+          echo "${{env.ENV_FILE}}" >> .env
+          cat .env
+      - run: node src/env.mjs
 
