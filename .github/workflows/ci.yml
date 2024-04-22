@@ -2,12 +2,12 @@ name: CI
 
 on: [push]
 
+env:
+  TEST_GITHUB_OTHER: ${{env.TEST_GITHUB_ENV}}
+
 jobs:
   env:
     runs-on: ubuntu-latest
-
-    env:
-      TEST_GITHUB_OTHER: ${{env.TEST_GITHUB_ENV}}
 
     steps:
       - uses: actions/checkout@v4
