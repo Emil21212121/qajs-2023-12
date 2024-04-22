@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 env:
-  TEST_GITHUB_OTHER: ${{env.TEST_GITHUB_ENV}}
+  TEST_GITHUB_OTHER: ${{vars.TEST_GITHUB_ENV}}
 
 jobs:
   env:
@@ -17,5 +17,5 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: echo ${{env.TEST_GITHUB_OTHER}}
-      - run: TEST_GITHUB_ENV=$TEST_GITHUB_ENV node src/env.js
+      - run: TEST_GITHUB_ENV=${{vars.TEST_GITHUB_ENV}} node src/env.js
 
