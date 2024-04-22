@@ -2,6 +2,7 @@ module.exports = {
   env: {
     es2021: true,
     node: true,
+    mocha: true
   },
   plugins: ['wdio', 'mocha'],
   extends: ['standard', 'prettier', 'plugin:wdio/recommended'],
