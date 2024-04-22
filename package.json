@@ -17,6 +17,7 @@
     "@babel/core": "^7.24.4",
     "@babel/preset-env": "^7.24.4",
     "@babel/register": "^7.23.7",
+    "@faker-js/faker": "^8.4.1",
     "@testing-library/webdriverio": "^3.2.1",
     "@wdio/allure-reporter": "^8.36.1",
     "@wdio/cli": "^8.36.1",
