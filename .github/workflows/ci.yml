@@ -1,10 +1,13 @@
 name: CI
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   env:
     runs-on: ubuntu-latest
+
+    environment:
+      TEST_GITHUB_OTHER: ${{env.TEST_GITHUB_ENV}}
 
     steps:
       - uses: actions/checkout@v4
@@ -13,6 +16,6 @@ jobs:
           node-version: 20.11.0
           cache: 'npm'
       - run: npm ci
-      - run: echo ${{env.TEST_GITHUB_ENV}}
-      - run: TEST_GITHUB_ENV=${{env.TEST_GITHUB_ENV}} node src/env.js
+      - run: echo ${{env.TEST_GITHUB_OTHER}}
+      - run: TEST_GITHUB_ENV=$TEST_GITHUB_ENV node src/env.js
 
