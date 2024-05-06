@@ -1,23 +1,15 @@
 module.exports = {
+  root: true,
   env: {
-    es2021: true,
     node: true,
+    'jest/globals': true,
   },
-  extends: ['standard', 'prettier'],
-  overrides: [
-    {
-      env: {
-        node: true,
-      },
-      files: ['.eslintrc.{js,cjs}'],
-      parserOptions: {
-        sourceType: 'script',
-      },
-    },
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+  plugins: ['jest', 'prettier'],
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    quotes: [2, 'single', { avoidEscape: true }],
+    semi: [2, 'always'],
   },
-  rules: {},
-}
+  parser: 'babel-eslint',
+};
