@@ -68,11 +68,11 @@ describe ("Avtorization user in Xpanel, Authentication, Get Policy, Create User 
 
 })
  
-<<<<<<< HEAD
-/*it ("Refresh token", async () => {
-=======
+
 it ("Refresh token", async () => {
->>>>>>> e8177e7e811b9bb54ee7f2fa87e11a01abc20bc2
+
+it ("Refresh token", async () => {
+
     const {baseURL, refreshToken} = configRefreshToken;
 
     const responseRefreshTokenSuccess = await axios.post(`${baseURL}`,{
@@ -83,8 +83,8 @@ it ("Refresh token", async () => {
     })
     expect(responseRefreshTokenSuccess.status).toBe(201)
     console.log(responseRefreshTokenSuccess.data.refreshToken)
-<<<<<<< HEAD
-})*/
-=======
+
+})
+
 })
 >>>>>>> e8177e7e811b9bb54ee7f2fa87e11a01abc20bc2
